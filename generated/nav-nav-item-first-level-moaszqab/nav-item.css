@@ -1,0 +1,149 @@
+.nav-item {
+  /* Scoped design tokens (no Figma Variables collection published) */
+  --nav-item-fg-idle: #ffffff;
+  --nav-item-fg-selected: #6ec8f2;
+  --nav-item-fg-hover: #b6e8ff;
+  --nav-item-indicator: #6ec8f2;
+  --nav-item-focus-ring: #b6e8ff;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 12px 16px;
+  box-sizing: border-box;
+
+  font-family: "Roboto", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  text-decoration: none;
+  color: var(--nav-item-fg-idle);
+  cursor: pointer;
+}
+
+/* Button-as-nav-item reset (works if consumer swaps <a> for <button>) */
+button.nav-item {
+  appearance: none;
+  border: 0;
+  background: none;
+  margin: 0;
+  text-align: left;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+button.nav-item::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.nav-item__indicator {
+  position: absolute;
+  left: 4px;
+  top: 50%;
+  width: 4px;
+  height: 44px;
+  transform: translateY(-50%);
+  background: var(--nav-item-indicator);
+  border-radius: 2px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.nav-item__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  color: var(--nav-item-fg-idle);
+  flex-shrink: 0;
+}
+
+.nav-item__icon > svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.nav-item__label {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.nav-item__counter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 8px;
+  flex-shrink: 0;
+}
+
+.nav-item__counter-number {
+  font-family: "Roboto", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  color: inherit;
+  text-align: right;
+}
+
+/* ---- State: Selected ----
+   Paint deltas only. Indicator becomes visible. */
+.nav-item[data-state="selected"],
+.nav-item[aria-current="page"],
+.nav-item.nav-item--selected {
+  color: var(--nav-item-fg-selected);
+}
+.nav-item[data-state="selected"] .nav-item__icon,
+.nav-item[aria-current="page"] .nav-item__icon,
+.nav-item.nav-item--selected .nav-item__icon {
+  color: var(--nav-item-fg-selected);
+}
+.nav-item[data-state="selected"] .nav-item__indicator,
+.nav-item[aria-current="page"] .nav-item__indicator,
+.nav-item.nav-item--selected .nav-item__indicator {
+  opacity: 1;
+}
+
+/* ---- State: Hover ----
+   Live :hover twinned with static .--hover / data-state="hover".
+   Paint deltas only. Indicator becomes visible (per Figma Hover variant). */
+.nav-item:hover,
+.nav-item[data-state="hover"],
+.nav-item.nav-item--hover {
+  color: var(--nav-item-fg-hover);
+}
+.nav-item:hover .nav-item__icon,
+.nav-item[data-state="hover"] .nav-item__icon,
+.nav-item.nav-item--hover .nav-item__icon {
+  color: var(--nav-item-fg-hover);
+}
+.nav-item:hover .nav-item__indicator,
+.nav-item[data-state="hover"] .nav-item__indicator,
+.nav-item.nav-item--hover .nav-item__indicator {
+  opacity: 1;
+}
+
+/* When a row is both selected and hovered, selected color wins (matches
+   Figma Selected variant color — Hover is a lighter tint of the same hue). */
+.nav-item[data-state="selected"]:hover,
+.nav-item[aria-current="page"]:hover,
+.nav-item.nav-item--selected:hover {
+  color: var(--nav-item-fg-selected);
+}
+.nav-item[data-state="selected"]:hover .nav-item__icon,
+.nav-item[aria-current="page"]:hover .nav-item__icon,
+.nav-item.nav-item--selected:hover .nav-item__icon {
+  color: var(--nav-item-fg-selected);
+}
+
+/* ---- Focus ring (inferred — not in Figma) ---- */
+.nav-item:focus-visible {
+  outline: 2px solid var(--nav-item-focus-ring);
+  outline-offset: -2px;
+}

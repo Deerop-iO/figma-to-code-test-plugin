@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Nav item — preview</title>
+    <link rel="stylesheet" href="./nav-item.css" />
+    <style>
+      body {
+        margin: 0;
+        padding: 24px;
+        background: #0b2230;
+        font-family: "Roboto", system-ui, sans-serif;
+      }
+      .preview-stack {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        width: 296px;
+        padding: 16px;
+        background: #0b2230;
+        border: 1px dashed #8a38f5;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="preview-stack">
+      <a href="#" class="nav-item" data-state="idle">
+        <span class="nav-item__indicator" aria-hidden="true"></span>
+        <span class="nav-item__icon" aria-hidden="true">
+          <svg viewBox="0 0 20 20" width="20" height="20" focusable="false" aria-hidden="true">
+            <path fill="currentColor" d="M3 3h6v6H3V3zm8 0h6v6h-6V3zM3 11h6v6H3v-6zm8 0h6v6h-6v-6z"/>
+          </svg>
+        </span>
+        <span class="nav-item__label">Overzicht</span>
+        <span class="nav-item__counter">
+          <span class="nav-item__counter-number">2</span>
+        </span>
+      </a>
+
+      <a href="#" class="nav-item" data-state="selected">
+        <span class="nav-item__indicator" aria-hidden="true"></span>
+        <span class="nav-item__icon" aria-hidden="true">
+          <svg viewBox="0 0 20 20" width="20" height="20" focusable="false" aria-hidden="true">
+            <path fill="currentColor" d="M3 3h6v6H3V3zm8 0h6v6h-6V3zM3 11h6v6H3v-6zm8 0h6v6h-6v-6z"/>
+          </svg>
+        </span>
+        <span class="nav-item__label">Overzicht</span>
+        <span class="nav-item__counter">
+          <span class="nav-item__counter-number">2</span>
+        </span>
+      </a>
+
+      <a href="#" class="nav-item" data-state="hover">
+        <span class="nav-item__indicator" aria-hidden="true"></span>
+        <span class="nav-item__icon" aria-hidden="true">
+          <svg viewBox="0 0 20 20" width="20" height="20" focusable="false" aria-hidden="true">
+            <path fill="currentColor" d="M3 3h6v6H3V3zm8 0h6v6h-6V3zM3 11h6v6H3v-6zm8 0h6v6h-6v-6z"/>
+          </svg>
+        </span>
+        <span class="nav-item__label">Overzicht</span>
+        <span class="nav-item__counter">
+          <span class="nav-item__counter-number">2</span>
+        </span>
+      </a>
+
+      <!-- Button variant of the same class — verifies element-agnostic styling -->
+      <button type="button" class="nav-item" data-state="idle">
+        <span class="nav-item__indicator" aria-hidden="true"></span>
+        <span class="nav-item__icon" aria-hidden="true">
+          <svg viewBox="0 0 20 20" width="20" height="20" focusable="false" aria-hidden="true">
+            <path fill="currentColor" d="M3 3h6v6H3V3zm8 0h6v6h-6V3zM3 11h6v6H3v-6zm8 0h6v6h-6v-6z"/>
+          </svg>
+        </span>
+        <span class="nav-item__label">Overzicht (button)</span>
+        <span class="nav-item__counter">
+          <span class="nav-item__counter-number">2</span>
+        </span>
+      </button>
+    </div>
+  </body>
+</html>
