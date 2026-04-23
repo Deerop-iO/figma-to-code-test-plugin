@@ -1,0 +1,10 @@
+:root {
+  /* Foreground */
+  --color-fg-on-dark: #ffffff;
+  --color-fg-selected: #003d58;
+  --color-fg-hover: #b6e8ff;
+  --color-fg-divider: #bcbdc8;
+
+  /* Backgrounds */
+  --color-bg-selected-pill: #b6e8ff;
+}
