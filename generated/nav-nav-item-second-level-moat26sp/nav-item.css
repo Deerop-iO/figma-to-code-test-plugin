@@ -1,0 +1,157 @@
+.nav-item {
+  /* layout */
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 40px;
+  padding: 8px 16px 8px 48px;
+  box-sizing: border-box;
+
+  /* reset anchor / button chrome so <a> or <button> both work */
+  appearance: none;
+  border: 0;
+  background: none;
+  margin: 0;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+
+  /* typography inherited; color set per state */
+  color: var(--color-fg-on-dark, #ffffff);
+  font-family: 'Roboto', system-ui, -apple-system, Segoe UI, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.nav-item::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.nav-item:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* selected-state pill — sized to the Figma Rectangle 969 (213x32 inside 264x40) */
+.nav-item::before {
+  content: '';
+  position: absolute;
+  inset: 4px 39px;
+  border-radius: 8px;
+  background: transparent;
+  pointer-events: none;
+}
+
+/* icon + label group */
+.nav-item__icon-label {
+  position: relative; /* sit above the pill */
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.nav-item__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+  color: var(--color-fg-on-dark, #ffffff);
+}
+
+.nav-item__icon svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.nav-item__label {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* counter */
+.nav-item__counter {
+  position: relative; /* sit above the pill */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 8px;
+  flex: 0 0 auto;
+  font-size: 10px;
+  line-height: 16px;
+  font-weight: 700;
+  color: inherit;
+}
+
+.nav-item__counter-number {
+  display: inline-block;
+}
+
+/* -------- boolean modifiers -------- */
+
+.nav-item:not(.nav-item--has-icon) .nav-item__icon {
+  display: none;
+}
+
+.nav-item:not(.nav-item--has-counter) .nav-item__counter {
+  display: none;
+}
+
+/* -------- variant axis: State -------- */
+
+/* Idle — baseline; listed for clarity */
+.nav-item[data-state='idle'] {
+  color: var(--color-fg-on-dark, #ffffff);
+}
+.nav-item[data-state='idle'] .nav-item__icon {
+  color: var(--color-fg-on-dark, #ffffff);
+}
+
+/* Selected — pill background, dark label + counter, mid-blue icon */
+.nav-item[data-state='selected'] {
+  color: var(--color-fg-selected, #003d58);
+}
+.nav-item[data-state='selected']::before {
+  background: var(--color-bg-selected-pill, #b6e8ff);
+}
+.nav-item[data-state='selected'] .nav-item__icon {
+  color: #6ec8f2;
+}
+
+/* Hover — paint-only delta: label, counter, icon all shift to light blue.
+   State-class modifier kept in parity with the live pseudo-class. */
+.nav-item[data-state='idle']:hover,
+.nav-item[data-state='hover'] {
+  color: var(--color-fg-hover, #b6e8ff);
+}
+.nav-item[data-state='idle']:hover .nav-item__icon,
+.nav-item[data-state='hover'] .nav-item__icon {
+  color: var(--color-fg-hover, #b6e8ff);
+}
+
+/* Divider — non-interactive caption row, uppercase label */
+.nav-item[data-state='divider'] {
+  color: var(--color-fg-divider, #bcbdc8);
+  cursor: default;
+  pointer-events: none;
+}
+.nav-item[data-state='divider'] .nav-item__label {
+  text-transform: uppercase;
+}
+.nav-item[data-state='divider'] .nav-item__icon {
+  color: var(--color-fg-divider, #bcbdc8);
+}
+.nav-item[data-state='divider'] .nav-item__counter {
+  display: none;
+}

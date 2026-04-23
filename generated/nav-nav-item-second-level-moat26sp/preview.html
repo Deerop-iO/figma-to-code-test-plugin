@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Nav item / Second level — preview</title>
+    <link rel="stylesheet" href="./tokens.css" />
+    <link rel="stylesheet" href="./nav-item.css" />
+    <style>
+      body {
+        margin: 0;
+        padding: 24px;
+        background: #ffffff;
+        font-family: 'Roboto', system-ui, sans-serif;
+      }
+      .preview-surface {
+        width: 296px;
+        padding: 16px;
+        background: #0a2b3d;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+      .preview-group {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="preview-surface">
+      <div class="preview-group">
+        <a class="nav-item nav-item--has-counter" data-state="idle" href="#">
+          <span class="nav-item__icon-label">
+            <span class="nav-item__label">Ongelezen</span>
+          </span>
+          <span class="nav-item__counter" aria-label="2 unread">
+            <span class="nav-item__counter-number">2</span>
+          </span>
+        </a>
+
+        <a class="nav-item nav-item--has-counter" data-state="selected" href="#">
+          <span class="nav-item__icon-label">
+            <span class="nav-item__label">Ongelezen</span>
+          </span>
+          <span class="nav-item__counter" aria-label="2 unread">
+            <span class="nav-item__counter-number">2</span>
+          </span>
+        </a>
+
+        <a class="nav-item nav-item--has-counter" data-state="hover" href="#">
+          <span class="nav-item__icon-label">
+            <span class="nav-item__label">Ongelezen</span>
+          </span>
+          <span class="nav-item__counter" aria-label="2 unread">
+            <span class="nav-item__counter-number">2</span>
+          </span>
+        </a>
+
+        <div class="nav-item" data-state="divider" role="presentation">
+          <span class="nav-item__icon-label">
+            <span class="nav-item__label">Mappen</span>
+          </span>
+        </div>
+      </div>
+
+      <div class="preview-group">
+        <!-- Element parity: same class on <button> to verify button-as-row resets -->
+        <button class="nav-item nav-item--has-counter" data-state="idle" type="button">
+          <span class="nav-item__icon-label">
+            <span class="nav-item__label">Ongelezen (button)</span>
+          </span>
+          <span class="nav-item__counter" aria-label="2 unread">
+            <span class="nav-item__counter-number">2</span>
+          </span>
+        </button>
+
+        <button class="nav-item nav-item--has-counter" data-state="selected" type="button">
+          <span class="nav-item__icon-label">
+            <span class="nav-item__label">Ongelezen (button)</span>
+          </span>
+          <span class="nav-item__counter" aria-label="2 unread">
+            <span class="nav-item__counter-number">2</span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
