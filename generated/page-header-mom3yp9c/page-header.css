@@ -1,0 +1,298 @@
+/* ===== Page Header ===== */
+
+.page-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-48) var(--spacing-64);
+  background-color: var(--color-primary-700);
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
+}
+
+/* Decorative circle — positioned per Figma: x=960, y=-416 relative to component */
+.page-header__circle {
+  position: absolute;
+  width: 1200px;
+  height: 1200px;
+  left: 960px;
+  top: -416px;
+  border-radius: 50%;
+  background-color: var(--color-primary-600);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+}
+
+/* Page info (left column) */
+.page-header__info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-16);
+  max-width: 648px;
+  flex-shrink: 0;
+}
+
+/* Dashboard variant has right padding on info */
+.page-header[data-page="dashboard"] .page-header__info {
+  padding-right: 56px;
+}
+
+/* Title */
+.page-header__title {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 58px;
+  color: var(--color-text-on-inverse);
+}
+
+/* Description */
+.page-header__description {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--color-text-on-inverse);
+}
+
+/* Organisation label (task/dossier/document variants) */
+.page-header__organisation {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21px;
+  color: var(--color-primary-300);
+}
+
+/* Wrapper for org + title */
+.page-header__title-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+}
+
+/* Document variant uses 10px gap in title-group */
+.page-header[data-page="document"] .page-header__title-group {
+  gap: 10px;
+}
+
+/* Dossier link row (task-dossier variant) */
+.page-header__dossier-row {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-8);
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.page-header__dossier-label {
+  margin: 0;
+  font-weight: 700;
+  font-family: "Barlow", sans-serif;
+  line-height: 20px;
+  color: var(--color-primary-300);
+}
+
+.page-header__dossier-link {
+  font-weight: 700;
+  color: var(--color-primary-300);
+  text-decoration: underline;
+}
+
+/* Deadline */
+.page-header__deadline {
+  margin: 0;
+  padding: var(--spacing-4);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 19px;
+  color: var(--color-text-on-inverse);
+}
+
+/* Task info row (task variant) */
+.page-header__task-info {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-16);
+}
+
+.page-header__task-info-label {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 19px;
+  color: var(--color-text-on-inverse);
+}
+
+.page-header__divider {
+  width: 20px;
+  height: 0;
+  border: none;
+  border-top: 1px solid var(--color-border-on);
+}
+
+.page-header__link {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21px;
+  color: var(--color-primary-300);
+  text-decoration: underline;
+}
+
+/* Dossier info row */
+.page-header__dossier-info {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-16);
+}
+
+/* Status badge */
+.page-header__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-4);
+  padding: var(--spacing-4) var(--spacing-8);
+  border-radius: var(--radius-s);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 19px;
+}
+
+.page-header__badge--danger {
+  background-color: var(--color-surface-feedback-danger);
+  color: var(--color-icon-feedback-warning);
+}
+
+.page-header__badge--success {
+  background-color: var(--color-surface-feedback-success);
+  color: var(--color-text-feedback-success);
+}
+
+.page-header__latest-update {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 19px;
+  color: var(--color-text-on-inverse);
+}
+
+/* Right-side areas */
+.page-header__aside {
+  position: relative;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Logo wrapper — fixed 116×116 square */
+.page-header__logo-wrapper {
+  width: 116px;
+  height: 116px;
+  background-color: var(--color-surface-base);
+  border-radius: var(--radius-l);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-header__logo-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Action wrapper (Default + Button) */
+.page-header__action {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-8);
+}
+
+/* Ghost button on dark */
+.page-header__button {
+  appearance: none;
+  border: 1px solid var(--color-primary-200);
+  background: none;
+  color: var(--color-text-on-inverse);
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  padding: 16px 24px;
+  border-radius: var(--radius-m);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-8);
+}
+
+.page-header__button:focus-visible {
+  outline: 2px solid var(--color-primary-200);
+  outline-offset: 2px;
+}
+
+/* Search wrapper (Dashboard) */
+.page-header__search-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-16);
+  width: 525px;
+  padding: var(--spacing-12) var(--spacing-32) var(--spacing-12) var(--spacing-16);
+  background-color: var(--color-primary-800);
+  border-radius: var(--radius-l);
+}
+
+.page-header__search-field-wrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-12);
+  width: 320px;
+  height: 48px;
+  padding: 11px 4px 11px 12px;
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-s);
+}
+
+.page-header__search-field {
+  appearance: none;
+  border: none;
+  background: none;
+  color: var(--color-text-on-inverse);
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  width: 100%;
+  padding: 0;
+}
+
+.page-header__search-field::placeholder {
+  color: var(--color-text-subtle-on-inverse);
+}
+
+.page-header__search-field:focus {
+  outline: none;
+}
+
+/* Layout variants via data-page */
+.page-header[data-page="default"] {
+  justify-content: flex-start;
+}
+
+.page-header[data-page="default-button"],
+.page-header[data-page="dashboard"],
+.page-header[data-page="task"],
+.page-header[data-page="task-dossier"],
+.page-header[data-page="dossier-action-needed"],
+.page-header[data-page="dossier-being-processed"] {
+  justify-content: space-between;
+}
+
+.page-header[data-page="document"] {
+  justify-content: flex-start;
+}
