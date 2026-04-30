@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <title>Page Header – Preview</title>
+  <link rel="stylesheet" href="./tokens.css" />
+  <link rel="stylesheet" href="./page-header.css" />
+  <style>
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Page=Default -->
+  <div style="margin-bottom:24px;">
+    <header class="page-header" data-page="default">
+      <div class="page-header__circle" aria-hidden="true"></div>
+      <div class="page-header__info">
+        <h1 class="page-header__title">Page Title</h1>
+        <p class="page-header__description">Page description</p>
+      </div>
+    </header>
+  </div>
+
+  <!-- Page=Default + Button -->
+  <div style="margin-bottom:24px;">
+    <header class="page-header" data-page="default-button">
+      <div class="page-header__circle" aria-hidden="true"></div>
+      <div class="page-header__info">
+        <h1 class="page-header__title">Page Title</h1>
+        <p class="page-header__description">Page description</p>
+      </div>
+      <div class="page-header__aside">
+        <div class="page-header__action">
+          <button class="page-header__button" type="button">
+            Nieuwe aanvraag
+          </button>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <!-- Page=Dashboard -->
+  <div style="margin-bottom:24px;">
+    <header class="page-header" data-page="dashboard">
+      <div class="page-header__circle" aria-hidden="true"></div>
+      <div class="page-header__info">
+        <h1 class="page-header__title">Goedemorgen Jean</h1>
+        <p class="page-header__description">Je hebt 2 lopende dossiers, 5 taken en 1 nieuw bericht.</p>
+      </div>
+      <div class="page-header__aside">
+        <div class="page-header__search-wrapper">
+          <div class="page-header__search-field-wrapper">
+            <label>
+              <span class="sr-only">Zoeken</span>
+              <input class="page-header__search-field" type="search" placeholder="Zoeken" />
+            </label>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <!-- Page=Task (dossier) -->
+  <div style="margin-bottom:24px;">
+    <header class="page-header" data-page="task-dossier">
+      <div class="page-header__circle" aria-hidden="true"></div>
+      <div class="page-header__info">
+        <div class="page-header__title-group">
+          <p class="page-header__organisation">Organisation</p>
+          <h1 class="page-header__title">Task title</h1>
+          <div class="page-header__dossier-row">
+            <span class="page-header__dossier-label">Dossier:</span>
+            <a href="#" class="page-header__dossier-link">Dossier title</a>
+          </div>
+        </div>
+        <p class="page-header__deadline">Uiterlijk tegen 31-05-2026</p>
+      </div>
+      <div class="page-header__aside">
+        <div class="page-header__logo-wrapper">
+          <img class="page-header__logo-img" src="https://placehold.co/102x72?text=Logo" alt="Organisation logo" />
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <!-- Page=Task -->
+  <div style="margin-bottom:24px;">
+    <header class="page-header" data-page="task">
+      <div class="page-header__circle" aria-hidden="true"></div>
+      <div class="page-header__info">
+        <div class="page-header__title-group">
+          <p class="page-header__organisation">Organisation</p>
+          <h1 class="page-header__title">Task title</h1>
+        </div>
+        <div class="page-header__task-info">
+          <p class="page-header__task-info-label">Uiterlijk tegen 31-05-2026</p>
+          <hr class="page-header__divider" aria-hidden="true" />
+          <a href="#" class="page-header__link">Bekijk het bericht</a>
+        </div>
+      </div>
+      <div class="page-header__aside">
+        <div class="page-header__logo-wrapper">
+          <img class="page-header__logo-img" src="https://placehold.co/102x72?text=Logo" alt="Organisation logo" />
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <!-- Page=Dossier (action needed) -->
+  <div style="margin-bottom:24px;">
+    <header class="page-header" data-page="dossier-action-needed">
+      <div class="page-header__circle" aria-hidden="true"></div>
+      <div class="page-header__info">
+        <div class="page-header__title-group">
+          <p class="page-header__organisation">Organisation</p>
+          <h1 class="page-header__title">Dossier name</h1>
+        </div>
+        <div class="page-header__dossier-info">
+          <span class="page-header__badge page-header__badge--danger">
+            Actie vereist
+          </span>
+          <p class="page-header__latest-update">Laatst gewijzigd op 12-04-2026 om 11:23</p>
+          <hr class="page-header__divider" aria-hidden="true" />
+          <a href="#" class="page-header__link">Bekijk het bericht</a>
+        </div>
+      </div>
+      <div class="page-header__aside">
+        <div class="page-header__logo-wrapper">
+          <img class="page-header__logo-img" src="https://placehold.co/102x72?text=Logo" alt="Organisation logo" />
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <!-- Page=Dossier (being processed) -->
+  <div style="margin-bottom:24px;">
+    <header class="page-header" data-page="dossier-being-processed">
+      <div class="page-header__circle" aria-hidden="true"></div>
+      <div class="page-header__info">
+        <div class="page-header__title-group">
+          <p class="page-header__organisation">Organisation</p>
+          <h1 class="page-header__title">Dossier name</h1>
+        </div>
+        <div class="page-header__dossier-info">
+          <span class="page-header__badge page-header__badge--success">
+            In behandeling
+          </span>
+          <p class="page-header__latest-update">Laatst gewijzigd op 12-04-2026 om 11:23</p>
+        </div>
+      </div>
+      <div class="page-header__aside">
+        <div class="page-header__logo-wrapper">
+          <img class="page-header__logo-img" src="https://placehold.co/102x72?text=Logo" alt="Organisation logo" />
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <!-- Page=Document -->
+  <div style="margin-bottom:24px;">
+    <header class="page-header" data-page="document">
+      <div class="page-header__circle" aria-hidden="true"></div>
+      <div class="page-header__info">
+        <div class="page-header__title-group">
+          <p class="page-header__organisation">Organisation</p>
+          <h1 class="page-header__title">Document title</h1>
+        </div>
+      </div>
+    </header>
+  </div>
+
+</body>
+</html>
