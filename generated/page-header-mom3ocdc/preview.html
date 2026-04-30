@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Page Header – Preview</title>
+  <link rel="stylesheet" href="./tokens.css" />
+  <link rel="stylesheet" href="./page-header.css" />
+  <style>
+    body { margin: 0; font-family: 'Inter', sans-serif; }
+    .preview-spacer { margin-bottom: 24px; }
+  </style>
+</head>
+<body>
+
+  <!-- Default -->
+  <div class="preview-spacer">
+    <header class="page-header" data-page="default">
+      <div class="page-header__ellipse" aria-hidden="true"></div>
+      <div class="page-header__info">
+        <h1 class="page-header__title">Page Title</h1>
+        <p class="page-header__description">Page description</p>
+      </div>
+    </header>
+  </div>
+
+  <!-- Default + Button -->
+  <div class="preview-spacer">
+    <header class="page-header" data-page="default-button">
+      <div class="page-header__ellipse" aria-hidden="true"></div>
+      <div class="page-header__info">
+        <h1 class="page-header__title">Page Title</h1>
+        <p class="page-header__description">Page description</p>
+      </div>
+      <div class="page-header__actions">
+        <button type="button" class="page-header__cta">
+          <span class="page-header__cta-icon" aria-hidden="true">+</span>
+          Nieuwe aanvraag
+        </button>
+      </div>
+    </header>
+  </div>
+
+  <!-- Dashboard -->
+  <div class="preview-spacer">
+    <header class="page-header" data-page="dashboard">
+      <div class="page-header__ellipse" aria-hidden="true"></div>
+      <div class="page-header__info">
+        <h1 class="page-header__title">Goedemorgen Jean</h1>
+        <p class="page-header__description">Je hebt 2 lopende dossiers, 5 taken en 1 nieuw bericht.</p>
+      </div>
+      <div class="page-header__search-wrapper">
+        <input type="search" class="page-header__search-input" placeholder="Zoeken" aria-label="Zoeken">
+      </div>
+    </header>
+  </div>
+
+  <!-- Task (dossier) -->
+  <div class="preview-spacer">
+    <header class="page-header" data-page="task-dossier">
+      <div class="page-header__ellipse" aria-hidden="true"></div>
+      <div class="page-header__info">
+        <div class="page-header__title-group">
+          <p class="page-header__organisation">Organisation</p>
+          <h1 class="page-header__title">Task title</h1>
+          <div class="page-header__dossier-ref">
+            <span class="page-header__dossier-ref-label">Dossier:</span>
+            <a href="#" class="page-header__dossier-ref-link">Dossier title</a>
+          </div>
+        </div>
+        <div class="page-header__deadline">Uiterlijk tegen 31-05-2026</div>
+      </div>
+      <div class="page-header__logo">
+        <div class="page-header__logo-wrapper"></div>
+      </div>
+    </header>
+  </div>
+
+  <!-- Task -->
+  <div class="preview-spacer">
+    <header class="page-header" data-page="task">
+      <div class="page-header__ellipse" aria-hidden="true"></div>
+      <div class="page-header__info">
+        <div class="page-header__title-group">
+          <p class="page-header__organisation">Organisation</p>
+          <h1 class="page-header__title">Task title</h1>
+        </div>
+        <div class="page-header__task-info">
+          <span class="page-header__task-info-label">Uiterlijk tegen 31-05-2026</span>
+          <hr class="page-header__divider" aria-hidden="true">
+          <a href="#" class="page-header__link">Bekijk het bericht</a>
+        </div>
+      </div>
+      <div class="page-header__logo">
+        <div class="page-header__logo-wrapper"></div>
+      </div>
+    </header>
+  </div>
+
+  <!-- Dossier (action needed) -->
+  <div class="preview-spacer">
+    <header class="page-header" data-page="dossier-action-needed">
+      <div class="page-header__ellipse" aria-hidden="true"></div>
+      <div class="page-header__info">
+        <div class="page-header__title-group">
+          <p class="page-header__organisation">Organisation</p>
+          <h1 class="page-header__title">Dossier name</h1>
+        </div>
+        <div class="page-header__dossier-info">
+          <span class="page-header__badge page-header__badge--danger">Actie vereist</span>
+          <span class="page-header__latest-update">Laatst gewijzigd op 12-04-2026 om 11:23</span>
+          <hr class="page-header__divider" aria-hidden="true">
+          <a href="#" class="page-header__link">Bekijk het bericht</a>
+        </div>
+      </div>
+      <div class="page-header__logo">
+        <div class="page-header__logo-wrapper"></div>
+      </div>
+    </header>
+  </div>
+
+  <!-- Dossier (being processed) -->
+  <div class="preview-spacer">
+    <header class="page-header" data-page="dossier-being-processed">
+      <div class="page-header__ellipse" aria-hidden="true"></div>
+      <div class="page-header__info">
+        <div class="page-header__title-group">
+          <p class="page-header__organisation">Organisation</p>
+          <h1 class="page-header__title">Dossier name</h1>
+        </div>
+        <div class="page-header__dossier-info">
+          <span class="page-header__badge page-header__badge--success">In behandeling</span>
+          <span class="page-header__latest-update">Laatst gewijzigd op 12-04-2026 om 11:23</span>
+        </div>
+      </div>
+      <div class="page-header__logo">
+        <div class="page-header__logo-wrapper"></div>
+      </div>
+    </header>
+  </div>
+
+  <!-- Document -->
+  <div class="preview-spacer">
+    <header class="page-header" data-page="document">
+      <div class="page-header__ellipse" aria-hidden="true"></div>
+      <div class="page-header__info">
+        <div class="page-header__title-group">
+          <p class="page-header__organisation">Organisation</p>
+          <h1 class="page-header__title">Document title</h1>
+        </div>
+      </div>
+    </header>
+  </div>
+
+</body>
+</html>
