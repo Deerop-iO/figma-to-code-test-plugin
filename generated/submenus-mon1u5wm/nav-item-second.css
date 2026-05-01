@@ -1,0 +1,123 @@
+
+/* --- Tokens (no Figma variables published; using local custom properties) --- */
+:root {
+  --nav-item-color-idle: #ffffff;
+  --nav-item-color-hover: #b6e8ff;
+  --nav-item-color-selected: #003d58;
+  --nav-item-color-divider: #bcbdc8;
+  --nav-item-selected-bg: #b6e8ff;
+  --nav-item-selected-radius: 8px;
+  --nav-item-icon-color-idle: #ffffff;
+  --nav-item-icon-color-hover: #b6e8ff;
+  --nav-item-icon-color-selected: #6ec8f2;
+  --nav-item-icon-color-divider: #b6e8ff;
+}
+
+/* --- Base --- */
+.nav-item-second {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 16px 8px 48px;
+  position: relative;
+  text-decoration: none;
+  color: var(--nav-item-color-idle);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  cursor: pointer;
+  border: 0;
+  background: none;
+}
+
+/* Button reset (when used as <button>) */
+button.nav-item-second {
+  appearance: none;
+  margin: 0;
+  text-align: left;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+/* --- Label --- */
+.nav-item-second__label {
+  flex: 1 1 0%;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* --- Icon (visible when Show Icon = true) --- */
+.nav-item-second__icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  color: var(--nav-item-icon-color-idle);
+}
+
+/* --- Counter --- */
+.nav-item-second__counter {
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 16px;
+  text-align: right;
+  padding-right: 8px;
+  flex-shrink: 0;
+}
+
+/* --- State: Hover (paint-only) --- */
+.nav-item-second:hover,
+.nav-item-second[data-state="hover"] {
+  color: var(--nav-item-color-hover);
+}
+
+.nav-item-second:hover .nav-item-second__icon,
+.nav-item-second[data-state="hover"] .nav-item-second__icon {
+  color: var(--nav-item-icon-color-hover);
+}
+
+/* --- State: Selected --- */
+.nav-item-second[data-state="selected"] {
+  color: var(--nav-item-color-selected);
+}
+
+.nav-item-second[data-state="selected"]::before {
+  content: '';
+  position: absolute;
+  inset: 4px 12px 4px 39px;
+  background: var(--nav-item-selected-bg);
+  border-radius: var(--nav-item-selected-radius);
+  z-index: -1;
+}
+
+.nav-item-second[data-state="selected"] .nav-item-second__icon {
+  color: var(--nav-item-icon-color-selected);
+}
+
+/* --- State: Divider (section header, non-interactive) --- */
+.nav-item-second[data-state="divider"] {
+  color: var(--nav-item-color-divider);
+  text-transform: uppercase;
+  pointer-events: none;
+  cursor: default;
+}
+
+.nav-item-second[data-state="divider"] .nav-item-second__icon {
+  display: none;
+}
+
+.nav-item-second[data-state="divider"] .nav-item-second__counter {
+  display: none;
+}
+
+/* --- Focus --- */
+.nav-item-second:focus-visible {
+  outline: 2px solid var(--nav-item-color-hover);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
