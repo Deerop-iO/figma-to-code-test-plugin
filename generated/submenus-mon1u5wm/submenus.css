@@ -1,0 +1,13 @@
+
+/* --- Submenus container --- */
+.submenus {
+  display: flex;
+  flex-direction: column;
+  width: 264px;
+}
+
+/* --- Whitespace spacer (divider between groups) --- */
+.submenus__spacer {
+  height: 12px;
+  flex-shrink: 0;
+}
