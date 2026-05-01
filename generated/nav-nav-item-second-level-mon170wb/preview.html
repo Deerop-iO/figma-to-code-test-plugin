@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Nav Item Second Level — Preview</title>
+  <link rel="stylesheet" href="./nav-item-second.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 32px;
+      background: #1a2233;
+      font-family: 'Roboto', sans-serif;
+    }
+    .preview-group {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      max-width: 320px;
+    }
+    .preview-label {
+      font-size: 11px;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: -8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="preview-group">
+    <span class="preview-label">Idle</span>
+    <a class="nav-item-second" data-state="idle" href="#">
+      <span class="nav-item-second__label">Ongelezen</span>
+      <span class="nav-item-second__counter">2</span>
+    </a>
+
+    <span class="preview-label">Selected</span>
+    <a class="nav-item-second" data-state="selected" href="#" aria-current="page">
+      <span class="nav-item-second__label">Ongelezen</span>
+      <span class="nav-item-second__counter">2</span>
+    </a>
+
+    <span class="preview-label">Hover (forced)</span>
+    <a class="nav-item-second" data-state="hover" href="#">
+      <span class="nav-item-second__label">Ongelezen</span>
+      <span class="nav-item-second__counter">2</span>
+    </a>
+
+    <span class="preview-label">Divider</span>
+    <span class="nav-item-second" data-state="divider" role="presentation">
+      <span class="nav-item-second__label">Mappen</span>
+    </span>
+  </div>
+</body>
+</html>
