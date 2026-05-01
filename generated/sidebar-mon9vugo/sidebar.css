@@ -1,0 +1,307 @@
+
+/* ===== Tokens (no Figma variables bound — using local custom props) ===== */
+:root {
+  --sidebar-bg: #002b3e;
+  --sidebar-border: #014462;
+  --sidebar-accent: #6ec8f2;
+  --sidebar-text: #ffffff;
+  --sidebar-avatar-bg: #006f9e;
+  --sidebar-logo-pill-bg: #84d2f6;
+  --sidebar-logo-pill-text: #2a2d41;
+  --sidebar-logo-hub: #000000;
+  --sidebar-width: 244px;
+}
+
+/* ===== Icon font placeholder ===== */
+.sidebar__icon {
+  font-family: 'fbds_ico', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== Root ===== */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: var(--sidebar-width);
+  height: 100%;
+  background: var(--sidebar-bg);
+  color: var(--sidebar-text);
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden;
+}
+
+/* ===== Header ===== */
+.sidebar__header {
+  position: relative;
+  width: 100%;
+  height: 77px;
+  background: var(--sidebar-bg);
+  flex-shrink: 0;
+}
+
+/* Logo group — 100.5 x 33.6 positioned at (16, 21.72) in header */
+.sidebar__logo {
+  position: absolute;
+  top: 21.72px;
+  left: 16px;
+  width: 100.5px;
+  height: 33.56px;
+}
+
+/*
+ * "my eBox" wordmark — this is a VECTOR in Figma, not editable text.
+ * For production, export the "my eBox" instance as an SVG and place it here.
+ * The placeholder below approximates the layout with text.
+ */
+.sidebar__logo-wordmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100.5px;
+  height: 33.56px;
+}
+
+/* White cursive "my" — VECTOR at (0, 13.06), 28.29 x 17.19 */
+.sidebar__logo-my {
+  position: absolute;
+  left: 0;
+  top: 13.06px;
+  width: 28.29px;
+  height: 17.19px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--sidebar-text);
+  line-height: 17.19px;
+}
+
+/* Blue pill — FRAME "Frame 3" at (33.62, 0.51), 66.71 x 32.99 */
+.sidebar__logo-pill {
+  position: absolute;
+  left: 33.62px;
+  top: 0.51px;
+  width: 66.71px;
+  height: 32.99px;
+  display: flex;
+  align-items: center;
+  padding: 8.25px 6.87px;
+  background: var(--sidebar-logo-pill-bg);
+  border-radius: 5.5px;
+  box-sizing: border-box;
+}
+
+/* "eBox" inside pill — VECTOR at (6.87, 8.25) within Frame 3, 52.97 x 17.07 */
+.sidebar__logo-pill-ebox {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--sidebar-logo-pill-text);
+  line-height: 1;
+}
+
+/* "HUB" — TEXT node at (62, 24) within logo GROUP, 42 x 28 */
+.sidebar__logo-hub {
+  position: absolute;
+  left: 62px;
+  top: 24px;
+  width: 42px;
+  height: 28px;
+  font-family: 'Barlow', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 28px;
+  color: var(--sidebar-logo-hub);
+  margin: 0;
+}
+
+.sidebar__search {
+  position: absolute;
+  top: 18.5px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  border-radius: 1000px;
+  border: 1px solid var(--sidebar-accent);
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  appearance: none;
+  color: inherit;
+}
+
+.sidebar__icon--search {
+  font-size: 24px;
+  color: var(--sidebar-text);
+}
+
+/* ===== Navigation ===== */
+.sidebar__nav {
+  flex: 1 1 0;
+  border-top: 1px solid var(--sidebar-border);
+  padding-top: 16px;
+  overflow-y: auto;
+}
+
+.sidebar__nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.sidebar__nav-item {
+  position: relative;
+}
+
+.sidebar__nav-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: var(--sidebar-text);
+  width: 100%;
+}
+
+.sidebar__nav-link:hover {
+  opacity: 0.85;
+}
+
+.sidebar__icon--nav {
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  flex-shrink: 0;
+}
+
+.sidebar__nav-label {
+  flex: 1 1 0;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.sidebar__nav-counter {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  text-align: right;
+  padding-right: 8px;
+}
+
+/* Selected state */
+.sidebar__nav-item--selected .sidebar__nav-link {
+  color: var(--sidebar-accent);
+}
+
+.sidebar__nav-item--selected .sidebar__icon--nav {
+  color: var(--sidebar-accent);
+}
+
+.sidebar__nav-item--selected .sidebar__nav-counter {
+  color: var(--sidebar-accent);
+}
+
+/* Indicator bar */
+.sidebar__indicator {
+  display: none;
+  position: absolute;
+  left: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 44px;
+  background: var(--sidebar-accent);
+  border-radius: 2px;
+}
+
+.sidebar__nav-item--selected .sidebar__indicator {
+  display: block;
+}
+
+/* Submenu slots */
+.sidebar__submenu {
+  padding-bottom: 16px;
+}
+
+.sidebar__submenu[hidden] {
+  display: none;
+}
+
+/* ===== User footer ===== */
+.sidebar__user {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background: var(--sidebar-bg);
+  flex-shrink: 0;
+}
+
+.sidebar__user-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1 1 0;
+}
+
+.sidebar__user-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 100px;
+  background: var(--sidebar-avatar-bg);
+  flex-shrink: 0;
+}
+
+.sidebar__icon--user {
+  font-size: 16px;
+  color: var(--sidebar-text);
+}
+
+.sidebar__user-name {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  color: var(--sidebar-text);
+}
+
+.sidebar__settings {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 1000px;
+  border: 0;
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  appearance: none;
+  color: inherit;
+}
+
+.sidebar__icon--settings {
+  font-size: 20px;
+  color: var(--sidebar-accent);
+}
