@@ -1,0 +1,16 @@
+
+/* === Submenus container === */
+.submenus {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 264px;
+  box-sizing: border-box;
+}
+
+/* === Whitespace divider === */
+.submenus__divider {
+  width: 100%;
+  height: 12px;
+  flex-shrink: 0;
+}
