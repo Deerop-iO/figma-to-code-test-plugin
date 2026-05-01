@@ -1,0 +1,82 @@
+
+/* --- Topbar --- */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 44px;
+  padding: 0 36px;
+  background: #ffffff;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* --- Language Switcher --- */
+.topbar__lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.topbar__lang {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  text-align: center;
+  text-decoration: none;
+  color: #2b2d42;
+  border: 1px solid transparent;
+  background: transparent;
+}
+
+.topbar__lang--active {
+  background: #6ec8f2;
+  border-color: #006f9e;
+}
+
+.topbar__lang:hover {
+  background: #d9eef7;
+}
+
+.topbar__lang--active:hover {
+  background: #6ec8f2;
+}
+
+.topbar__lang:focus-visible {
+  outline: 2px solid #006f9e;
+  outline-offset: 2px;
+}
+
+/* --- Info + Logo --- */
+.topbar__info {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.topbar__info-text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #2b2d42;
+}
+
+.topbar__logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  text-decoration: none;
+}
+
+.topbar__logo-svg {
+  display: block;
+  width: 32px;
+  height: 32px;
+}
