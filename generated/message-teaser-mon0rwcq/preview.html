@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Message Teaser — Preview</title>
+  <link rel="stylesheet" href="./tokens.css" />
+  <link rel="stylesheet" href="./logo-wrapper.css" />
+  <link rel="stylesheet" href="./badge.css" />
+  <link rel="stylesheet" href="./message-teaser.css" />
+  <style>
+    body { font-family: sans-serif; padding: 24px; display: flex; flex-direction: column; gap: 16px; background: #f0f0f0; }
+    h2 { margin: 16px 0 8px; font-size: 14px; color: #666; }
+  </style>
+</head>
+<body>
+
+  <h2>Idle, Read=False (unread)</h2>
+  <div>
+    <article class="message-teaser" data-state="idle">
+      <div class="message-teaser__content">
+        <div class="logo-wrapper" data-organisation="openbaar-ministerie" data-location="message-teaser">
+          <img class="logo-wrapper__image" src="logo-openbaar-ministerie.png" alt="Openbaar Ministerie logo" />
+        </div>
+        <div class="message-teaser__info">
+          <div class="message-teaser__sender-title">
+            <p class="message-teaser__sender">Openbaar Ministerie</p>
+            <h3 class="message-teaser__title">Verkeersboete betalen</h3>
+          </div>
+          <div class="message-teaser__availability">
+            <svg class="message-teaser__icon" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M9 1.5C4.86 1.5 1.5 4.86 1.5 9s3.36 7.5 7.5 7.5 7.5-3.36 7.5-7.5S13.14 1.5 9 1.5zm0 13.5c-3.315 0-6-2.685-6-6s2.685-6 6-6 6 2.685 6 6-2.685 6-6 6zm.375-9.75h-1.125v4.5l3.938 2.362.562-.922-3.375-2.003V5.25z" fill="currentColor"/></svg>
+            <span class="message-teaser__meta">Beschikbaar van 12-04-2026 tot 31-05-2026</span>
+          </div>
+        </div>
+        <div class="message-teaser__badges">
+          <span class="badge" data-type="success">Afgehandeld</span>
+          <span class="badge" data-type="info">Ongelezen</span>
+          <span class="badge" data-type="info">Actie vereist</span>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <h2>Idle, Read=True (read)</h2>
+  <div>
+    <article class="message-teaser message-teaser--read" data-state="idle">
+      <div class="message-teaser__content">
+        <div class="logo-wrapper" data-organisation="openbaar-ministerie" data-location="message-teaser">
+          <img class="logo-wrapper__image" src="logo-openbaar-ministerie.png" alt="Openbaar Ministerie logo" />
+        </div>
+        <div class="message-teaser__info">
+          <div class="message-teaser__sender-title">
+            <p class="message-teaser__sender">Openbaar Ministerie</p>
+            <h3 class="message-teaser__title">Verkeersboete betalen</h3>
+          </div>
+          <div class="message-teaser__availability">
+            <svg class="message-teaser__icon" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M9 1.5C4.86 1.5 1.5 4.86 1.5 9s3.36 7.5 7.5 7.5 7.5-3.36 7.5-7.5S13.14 1.5 9 1.5zm0 13.5c-3.315 0-6-2.685-6-6s2.685-6 6-6 6 2.685 6 6-2.685 6-6 6zm.375-9.75h-1.125v4.5l3.938 2.362.562-.922-3.375-2.003V5.25z" fill="currentColor"/></svg>
+            <span class="message-teaser__meta">Beschikbaar van 12-04-2026 tot 31-05-2026</span>
+          </div>
+        </div>
+        <div class="message-teaser__badges">
+          <span class="badge" data-type="success">Afgehandeld</span>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <h2>Hover, Read=False</h2>
+  <div>
+    <article class="message-teaser" data-state="hover">
+      <div class="message-teaser__content">
+        <div class="logo-wrapper" data-organisation="openbaar-ministerie" data-location="message-teaser">
+          <img class="logo-wrapper__image" src="logo-openbaar-ministerie.png" alt="Openbaar Ministerie logo" />
+        </div>
+        <div class="message-teaser__info">
+          <div class="message-teaser__sender-title">
+            <p class="message-teaser__sender">Openbaar Ministerie</p>
+            <h3 class="message-teaser__title">Verkeersboete betalen</h3>
+          </div>
+          <div class="message-teaser__availability">
+            <svg class="message-teaser__icon" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M9 1.5C4.86 1.5 1.5 4.86 1.5 9s3.36 7.5 7.5 7.5 7.5-3.36 7.5-7.5S13.14 1.5 9 1.5zm0 13.5c-3.315 0-6-2.685-6-6s2.685-6 6-6 6 2.685 6 6-2.685 6-6 6zm.375-9.75h-1.125v4.5l3.938 2.362.562-.922-3.375-2.003V5.25z" fill="currentColor"/></svg>
+            <span class="message-teaser__meta">Beschikbaar van 12-04-2026 tot 31-05-2026</span>
+          </div>
+        </div>
+        <div class="message-teaser__badges">
+          <span class="badge" data-type="success">Afgehandeld</span>
+          <span class="badge" data-type="info">Ongelezen</span>
+          <span class="badge" data-type="info">Actie vereist</span>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <h2>Hover, Read=True</h2>
+  <div>
+    <article class="message-teaser message-teaser--read" data-state="hover">
+      <div class="message-teaser__content">
+        <div class="logo-wrapper" data-organisation="openbaar-ministerie" data-location="message-teaser">
+          <img class="logo-wrapper__image" src="logo-openbaar-ministerie.png" alt="Openbaar Ministerie logo" />
+        </div>
+        <div class="message-teaser__info">
+          <div class="message-teaser__sender-title">
+            <p class="message-teaser__sender">Openbaar Ministerie</p>
+            <h3 class="message-teaser__title">Verkeersboete betalen</h3>
+          </div>
+          <div class="message-teaser__availability">
+            <svg class="message-teaser__icon" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M9 1.5C4.86 1.5 1.5 4.86 1.5 9s3.36 7.5 7.5 7.5 7.5-3.36 7.5-7.5S13.14 1.5 9 1.5zm0 13.5c-3.315 0-6-2.685-6-6s2.685-6 6-6 6 2.685 6 6-2.685 6-6 6zm.375-9.75h-1.125v4.5l3.938 2.362.562-.922-3.375-2.003V5.25z" fill="currentColor"/></svg>
+            <span class="message-teaser__meta">Beschikbaar van 12-04-2026 tot 31-05-2026</span>
+          </div>
+        </div>
+        <div class="message-teaser__badges">
+          <span class="badge" data-type="success">Afgehandeld</span>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <h2>Pressed, Read=False</h2>
+  <div>
+    <article class="message-teaser" data-state="pressed">
+      <div class="message-teaser__content">
+        <div class="logo-wrapper" data-organisation="openbaar-ministerie" data-location="message-teaser">
+          <img class="logo-wrapper__image" src="logo-openbaar-ministerie.png" alt="Openbaar Ministerie logo" />
+        </div>
+        <div class="message-teaser__info">
+          <div class="message-teaser__sender-title">
+            <p class="message-teaser__sender">Openbaar Ministerie</p>
+            <h3 class="message-teaser__title">Verkeersboete betalen</h3>
+          </div>
+          <div class="message-teaser__availability">
+            <svg class="message-teaser__icon" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M9 1.5C4.86 1.5 1.5 4.86 1.5 9s3.36 7.5 7.5 7.5 7.5-3.36 7.5-7.5S13.14 1.5 9 1.5zm0 13.5c-3.315 0-6-2.685-6-6s2.685-6 6-6 6 2.685 6 6-2.685 6-6 6zm.375-9.75h-1.125v4.5l3.938 2.362.562-.922-3.375-2.003V5.25z" fill="currentColor"/></svg>
+            <span class="message-teaser__meta">Beschikbaar van 12-04-2026 tot 31-05-2026</span>
+          </div>
+        </div>
+        <div class="message-teaser__badges">
+          <span class="badge" data-type="success">Afgehandeld</span>
+          <span class="badge" data-type="info">Ongelezen</span>
+          <span class="badge" data-type="info">Actie vereist</span>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <h2>Selected, Read=False</h2>
+  <div>
+    <article class="message-teaser" data-state="selected" aria-current="true">
+      <div class="message-teaser__content">
+        <div class="logo-wrapper" data-organisation="openbaar-ministerie" data-location="message-teaser">
+          <img class="logo-wrapper__image" src="logo-openbaar-ministerie.png" alt="Openbaar Ministerie logo" />
+        </div>
+        <div class="message-teaser__info">
+          <div class="message-teaser__sender-title">
+            <p class="message-teaser__sender">Openbaar Ministerie</p>
+            <h3 class="message-teaser__title">Verkeersboete betalen</h3>
+          </div>
+          <div class="message-teaser__availability">
+            <svg class="message-teaser__icon" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M9 1.5C4.86 1.5 1.5 4.86 1.5 9s3.36 7.5 7.5 7.5 7.5-3.36 7.5-7.5S13.14 1.5 9 1.5zm0 13.5c-3.315 0-6-2.685-6-6s2.685-6 6-6 6 2.685 6 6-2.685 6-6 6zm.375-9.75h-1.125v4.5l3.938 2.362.562-.922-3.375-2.003V5.25z" fill="currentColor"/></svg>
+            <span class="message-teaser__meta">Beschikbaar van 12-04-2026 tot 31-05-2026</span>
+          </div>
+        </div>
+        <div class="message-teaser__badges">
+          <span class="badge" data-type="info">Ongelezen</span>
+          <span class="badge" data-type="info">Actie vereist</span>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <h2>Selected, Read=True</h2>
+  <div>
+    <article class="message-teaser message-teaser--read" data-state="selected" aria-current="true">
+      <div class="message-teaser__content">
+        <div class="logo-wrapper" data-organisation="openbaar-ministerie" data-location="message-teaser">
+          <img class="logo-wrapper__image" src="logo-openbaar-ministerie.png" alt="Openbaar Ministerie logo" />
+        </div>
+        <div class="message-teaser__info">
+          <div class="message-teaser__sender-title">
+            <p class="message-teaser__sender">Openbaar Ministerie</p>
+            <h3 class="message-teaser__title">Verkeersboete betalen</h3>
+          </div>
+          <div class="message-teaser__availability">
+            <svg class="message-teaser__icon" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M9 1.5C4.86 1.5 1.5 4.86 1.5 9s3.36 7.5 7.5 7.5 7.5-3.36 7.5-7.5S13.14 1.5 9 1.5zm0 13.5c-3.315 0-6-2.685-6-6s2.685-6 6-6 6 2.685 6 6-2.685 6-6 6zm.375-9.75h-1.125v4.5l3.938 2.362.562-.922-3.375-2.003V5.25z" fill="currentColor"/></svg>
+            <span class="message-teaser__meta">Beschikbaar van 12-04-2026 tot 31-05-2026</span>
+          </div>
+        </div>
+        <div class="message-teaser__badges">
+          <span class="badge" data-type="success">Afgehandeld</span>
+        </div>
+      </div>
+    </article>
+  </div>
+
+</body>
+</html>
