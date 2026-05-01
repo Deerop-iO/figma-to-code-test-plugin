@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Sidebar – Preview</title>
+  <link rel="stylesheet" href="./sidebar.css" />
+  <style>
+    body { margin: 0; font-family: 'Roboto', sans-serif; background: #1a1a2e; }
+  </style>
+</head>
+<body>
+
+  <aside class="sidebar" aria-label="Main navigation">
+    <header class="sidebar__header">
+      <div class="sidebar__logo">
+        <span class="sidebar__logo-my">my</span>
+        <span class="sidebar__logo-hub">HUB</span>
+      </div>
+      <button class="sidebar__search-btn" type="button" aria-label="Search">
+        <span class="icon" aria-hidden="true">search</span>
+      </button>
+    </header>
+
+    <nav class="sidebar__nav">
+      <button type="button"
+              class="sidebar__nav-item sidebar__nav-item--selected"
+              aria-expanded="false"
+              aria-controls="submenu-tasks"
+              data-submenu="tasks">
+        <span class="sidebar__nav-item-icon"><span class="icon" aria-hidden="true">dashboard</span></span>
+        <span class="sidebar__nav-item-label">Overzicht</span>
+        <span class="sidebar__nav-item-counter">2</span>
+      </button>
+
+      <button type="button"
+              class="sidebar__nav-item"
+              aria-expanded="false"
+              aria-controls="submenu-messages"
+              data-submenu="messages">
+        <span class="sidebar__nav-item-icon"><span class="icon" aria-hidden="true">mail</span></span>
+        <span class="sidebar__nav-item-label">Berichten</span>
+        <span class="sidebar__nav-item-counter">1</span>
+      </button>
+
+      <button type="button"
+              class="sidebar__nav-item"
+              aria-expanded="false"
+              aria-controls="submenu-dossiers"
+              data-submenu="dossiers">
+        <span class="sidebar__nav-item-icon"><span class="icon" aria-hidden="true">e-loket</span></span>
+        <span class="sidebar__nav-item-label">Dossiers</span>
+        <span class="sidebar__nav-item-counter">1</span>
+      </button>
+
+      <button type="button"
+              class="sidebar__nav-item"
+              aria-expanded="false"
+              aria-controls="submenu-documents"
+              data-submenu="documents">
+        <span class="sidebar__nav-item-icon"><span class="icon" aria-hidden="true">documents</span></span>
+        <span class="sidebar__nav-item-label">Documenten</span>
+        <span class="sidebar__nav-item-counter">1</span>
+      </button>
+
+      <div class="sidebar__submenu sidebar__submenu--tasks" id="submenu-tasks" role="region" aria-label="Tasks submenu">
+        <a href="#" style="color: var(--sidebar-text); text-decoration: none; display: block; padding: 4px 0; font-size: 14px;">Taak 1</a>
+        <a href="#" style="color: var(--sidebar-text); text-decoration: none; display: block; padding: 4px 0; font-size: 14px;">Taak 2</a>
+      </div>
+
+      <div class="sidebar__submenu sidebar__submenu--messages" id="submenu-messages" role="region" aria-label="Messages submenu">
+        <a href="#" style="color: var(--sidebar-text); text-decoration: none; display: block; padding: 4px 0; font-size: 14px;">Inbox</a>
+      </div>
+
+      <div class="sidebar__submenu sidebar__submenu--dossiers" id="submenu-dossiers" role="region" aria-label="Dossiers submenu">
+        <a href="#" style="color: var(--sidebar-text); text-decoration: none; display: block; padding: 4px 0; font-size: 14px;">Dossier A</a>
+      </div>
+
+      <div class="sidebar__submenu sidebar__submenu--documents" id="submenu-documents" role="region" aria-label="Documents submenu">
+        <a href="#" style="color: var(--sidebar-text); text-decoration: none; display: block; padding: 4px 0; font-size: 14px;">Document 1</a>
+      </div>
+    </nav>
+
+    <footer class="sidebar__user">
+      <div class="sidebar__user-info">
+        <div class="sidebar__user-avatar">
+          <span class="icon" aria-hidden="true">user</span>
+        </div>
+        <span class="sidebar__user-name">Jean Peeters</span>
+      </div>
+      <button class="sidebar__settings-btn" type="button" aria-label="Settings">
+        <span class="icon" aria-hidden="true">settings</span>
+      </button>
+    </footer>
+  </aside>
+
+  <script>
+    // Toggle submenu visibility on nav-item click
+    document.querySelectorAll('.sidebar__nav-item[data-submenu]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var submenuKey = btn.getAttribute('data-submenu');
+        var sidebar = btn.closest('.sidebar');
+        var className = 'sidebar--show-' + submenuKey + '-submenu';
+        var isOpen = sidebar.classList.toggle(className);
+
+        // Update aria-expanded
+        btn.setAttribute('aria-expanded', String(isOpen));
+      });
+    });
+  </script>
+
+</body>
+</html>
