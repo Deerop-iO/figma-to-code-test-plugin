@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Submenus — Preview</title>
+  <link rel="stylesheet" href="./nav-item-second.css">
+  <link rel="stylesheet" href="./submenus.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 32px;
+      background: #1a2233;
+      font-family: 'Roboto', sans-serif;
+    }
+    .preview-group {
+      margin-bottom: 40px;
+    }
+    .preview-label {
+      font-size: 11px;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 8px;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Section=Tasks -->
+  <div class="preview-group">
+    <span class="preview-label">Section = Tasks</span>
+    <nav class="submenus" data-section="tasks" aria-label="Tasks sub-navigation">
+      <a class="nav-item-second" data-state="selected" href="#" aria-current="page">
+        <span class="nav-item-second__label">Actieve taken</span>
+        <span class="nav-item-second__counter">2</span>
+      </a>
+      <a class="nav-item-second" data-state="idle" href="#">
+        <span class="nav-item-second__label">Afgehandelde taken</span>
+        <span class="nav-item-second__counter">2</span>
+      </a>
+    </nav>
+  </div>
+
+  <!-- Section=Messages -->
+  <div class="preview-group">
+    <span class="preview-label">Section = Messages</span>
+    <nav class="submenus" data-section="messages" aria-label="Messages sub-navigation">
+      <a class="nav-item-second" data-state="selected" href="#" aria-current="page">
+        <span class="nav-item-second__label">Alle</span>
+        <span class="nav-item-second__counter">2</span>
+      </a>
+      <a class="nav-item-second" data-state="idle" href="#">
+        <span class="nav-item-second__label">Aangetekend</span>
+        <span class="nav-item-second__counter">2</span>
+      </a>
+      <a class="nav-item-second" data-state="idle" href="#">
+        <span class="nav-item-second__label">Ongelezen</span>
+        <span class="nav-item-second__counter">2</span>
+      </a>
+      <a class="nav-item-second" data-state="idle" href="#">
+        <span class="nav-item-second__label">Acties vereist</span>
+        <span class="nav-item-second__counter">2</span>
+      </a>
+      <div class="submenus__spacer"></div>
+      <span class="nav-item-second" data-state="divider" role="presentation">
+        <span class="nav-item-second__label">Mappen</span>
+      </span>
+      <a class="nav-item-second" data-state="idle" href="#">
+        <span class="nav-item-second__label">Pensioen</span>
+        <span class="nav-item-second__counter">2</span>
+      </a>
+      <a class="nav-item-second" data-state="idle" href="#">
+        <span class="nav-item-second__label">Medisch</span>
+        <span class="nav-item-second__counter">2</span>
+      </a>
+      <a class="nav-item-second" data-state="idle" href="#">
+        <span class="nav-item-second__label">Prullenbak</span>
+        <span class="nav-item-second__counter">2</span>
+      </a>
+      <div class="submenus__spacer"></div>
+      <a class="nav-item-second" data-state="idle" href="#">
+        <span class="nav-item-second__label">Nieuwe map</span>
+        <span class="nav-item-second__counter">2</span>
+      </a>
+      <a class="nav-item-second" data-state="idle" href="#">
+        <span class="nav-item-second__label">Mapbeheer</span>
+        <span class="nav-item-second__counter">2</span>
+      </a>
+    </nav>
+  </div>
+
+  <!-- Section=Dossiers -->
+  <div class="preview-group">
+    <span class="preview-label">Section = Dossiers</span>
+    <nav class="submenus" data-section="dossiers" aria-label="Dossiers sub-navigation">
+      <a class="nav-item-second" data-state="selected" href="#" aria-current="page">
+        <span class="nav-item-second__label">Lopende dossiers</span>
+        <span class="nav-item-second__counter">2</span>
+      </a>
+      <a class="nav-item-second" data-state="idle" href="#">
+        <span class="nav-item-second__label">Voltooide dossiers</span>
+        <span class="nav-item-second__counter">2</span>
+      </a>
+      <div class="submenus__spacer"></div>
+      <a class="nav-item-second" data-state="idle" href="#">
+        <span class="nav-item-second__label">Nieuwe map</span>
+        <span class="nav-item-second__counter">2</span>
+      </a>
+    </nav>
+  </div>
+
+  <!-- Section=Documents -->
+  <div class="preview-group">
+    <span class="preview-label">Section = Documents</span>
+    <nav class="submenus" data-section="documents" aria-label="Documents sub-navigation">
+      <a class="nav-item-second" data-state="selected" href="#" aria-current="page">
+        <span class="nav-item-second__label">Alle</span>
+        <span class="nav-item-second__counter">2</span>
+      </a>
+      <a class="nav-item-second" data-state="idle" href="#">
+        <span class="nav-item-second__label">Familie</span>
+        <span class="nav-item-second__counter">4</span>
+      </a>
+      <a class="nav-item-second" data-state="idle" href="#">
+        <span class="nav-item-second__label">Financiën</span>
+        <span class="nav-item-second__counter">2</span>
+      </a>
+      <a class="nav-item-second" data-state="idle" href="#">
+        <span class="nav-item-second__label">Gezondheid</span>
+        <span class="nav-item-second__counter">5</span>
+      </a>
+      <div class="submenus__spacer"></div>
+      <a class="nav-item-second" data-state="idle" href="#">
+        <span class="nav-item-second__label">Nieuwe map</span>
+        <span class="nav-item-second__counter">2</span>
+      </a>
+    </nav>
+  </div>
+
+</body>
+</html>
