@@ -1,0 +1,119 @@
+
+/* === Tokens (no Figma variables published; using local custom props) === */
+:root {
+  --nav-item-color-idle: #ffffff;
+  --nav-item-color-selected: #6ec8f2;
+  --nav-item-color-hover: #b6e8ff;
+  --nav-item-indicator-color: #6ec8f2;
+  --nav-item-font-family: 'Roboto', sans-serif;
+}
+
+/* === Base === */
+.nav-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: var(--nav-item-color-idle);
+  font-family: var(--nav-item-font-family);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0;
+  cursor: pointer;
+  border: 0;
+  background: none;
+  appearance: none;
+  text-align: left;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* === Indicator (left bar) === */
+.nav-item__indicator {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 44px;
+  border-radius: 0 2px 2px 0;
+  background: var(--nav-item-indicator-color);
+}
+
+/* === Icon & Label wrapper === */
+.nav-item__icon-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1 1 0%;
+  min-width: 0;
+}
+
+/* === Icon (icon-font glyph) === */
+.nav-item__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  font-family: 'fbds_ico', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1;
+  color: inherit;
+}
+
+/* === Label === */
+.nav-item__label {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  color: inherit;
+}
+
+/* === Counter === */
+.nav-item__counter {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  color: inherit;
+  padding-right: 8px;
+  text-align: right;
+}
+
+/* === Boolean: hide counter === */
+.nav-item[data-show-counter="false"] .nav-item__counter {
+  display: none;
+}
+
+/* === Boolean: hide icon === */
+.nav-item[data-show-icon="false"] .nav-item__icon {
+  display: none;
+}
+
+/* === State: Idle (default) === */
+.nav-item[data-state="idle"] {
+  color: var(--nav-item-color-idle);
+}
+
+/* === State: Selected === */
+.nav-item[data-state="selected"],
+.nav-item[aria-current="page"] {
+  color: var(--nav-item-color-selected);
+}
+
+/* === State: Hover (static class + live pseudo) === */
+.nav-item:hover,
+.nav-item[data-state="hover"] {
+  color: var(--nav-item-color-hover);
+}
+
+/* === Focus visible === */
+.nav-item:focus-visible {
+  outline: 2px solid var(--nav-item-color-selected);
+  outline-offset: -2px;
+  border-radius: 4px;
+}
