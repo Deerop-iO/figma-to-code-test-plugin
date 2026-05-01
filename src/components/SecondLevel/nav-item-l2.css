@@ -1,0 +1,101 @@
+/* === Nav Item Level 2 === */
+
+:root {
+  --nav-item-l2-color-idle: #ffffff;
+  --nav-item-l2-color-hover: #b6e8ff;
+  --nav-item-l2-color-selected: #003d58;
+  --nav-item-l2-color-divider: #bcbdc8;
+  --nav-item-l2-bg-selected: #b6e8ff;
+}
+
+/* Base */
+.nav-item-l2 {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 16px 8px 48px;
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--nav-item-l2-color-idle);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+/* Button reset (when used as <button>) */
+button.nav-item-l2 {
+  appearance: none;
+  border: 0;
+  background: none;
+  margin: 0;
+  text-align: left;
+  width: 100%;
+}
+
+/* Selected background pill */
+.nav-item-l2[data-state="selected"]::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 39px;
+  right: 12px;
+  bottom: 4px;
+  background: var(--nav-item-l2-bg-selected);
+  border-radius: 8px;
+  z-index: 0;
+}
+
+.nav-item-l2__label,
+.nav-item-l2__counter {
+  position: relative;
+  z-index: 1;
+}
+
+/* Label */
+.nav-item-l2__label {
+  flex: 1 1 0;
+}
+
+/* Counter */
+.nav-item-l2__counter {
+  font-size: 10px;
+  line-height: 16px;
+  text-align: right;
+  padding-right: 8px;
+}
+
+/* === State: Idle === */
+.nav-item-l2[data-state="idle"] {
+  color: var(--nav-item-l2-color-idle);
+}
+
+/* === State: Hover (static variant + live pseudo) === */
+.nav-item-l2[data-state="hover"],
+.nav-item-l2:hover {
+  color: var(--nav-item-l2-color-hover);
+}
+
+/* === State: Selected === */
+.nav-item-l2[data-state="selected"] {
+  color: var(--nav-item-l2-color-selected);
+}
+
+/* === State: Divider === */
+.nav-item-l2[data-state="divider"] {
+  color: var(--nav-item-l2-color-divider);
+  text-transform: uppercase;
+  pointer-events: none;
+  cursor: default;
+}
+
+.nav-item-l2[data-state="divider"] .nav-item-l2__counter {
+  display: none;
+}
+
+/* === Boolean: hide counter === */
+.nav-item-l2--hide-counter .nav-item-l2__counter {
+  display: none;
+}

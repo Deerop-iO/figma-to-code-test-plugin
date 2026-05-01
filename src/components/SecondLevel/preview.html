@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Nav Item L2 — Preview</title>
+  <link rel="stylesheet" href="./nav-item-l2.css">
+  <style>
+    body {
+      background: #1a1a2e;
+      padding: 32px;
+      font-family: 'Roboto', sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <div style="max-width: 264px;">
+    <!-- Idle -->
+    <div>
+      <a class="nav-item-l2" data-state="idle" href="#">
+        <span class="nav-item-l2__label">Ongelezen</span>
+        <span class="nav-item-l2__counter">2</span>
+      </a>
+    </div>
+    <!-- Selected -->
+    <div>
+      <a class="nav-item-l2" data-state="selected" href="#">
+        <span class="nav-item-l2__label">Ongelezen</span>
+        <span class="nav-item-l2__counter">2</span>
+      </a>
+    </div>
+    <!-- Hover (static) -->
+    <div>
+      <a class="nav-item-l2" data-state="hover" href="#">
+        <span class="nav-item-l2__label">Ongelezen</span>
+        <span class="nav-item-l2__counter">2</span>
+      </a>
+    </div>
+    <!-- Divider -->
+    <div>
+      <span class="nav-item-l2" data-state="divider" role="presentation">
+        <span class="nav-item-l2__label">Mappen</span>
+        <span class="nav-item-l2__counter"></span>
+      </span>
+    </div>
+    <!-- Button element (idle) -->
+    <div>
+      <button class="nav-item-l2" data-state="idle" type="button">
+        <span class="nav-item-l2__label">Ongelezen</span>
+        <span class="nav-item-l2__counter">2</span>
+      </button>
+    </div>
+  </div>
+</body>
+</html>
