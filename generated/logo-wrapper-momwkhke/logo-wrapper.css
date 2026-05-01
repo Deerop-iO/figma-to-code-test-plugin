@@ -1,0 +1,39 @@
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.logo-wrapper__image {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Organisation-specific image sizing to match Figma layout */
+
+.logo-wrapper[data-organisation="openbaar-ministerie"] .logo-wrapper__image {
+  width: 30.78px;
+  height: 30.78px;
+}
+
+.logo-wrapper[data-organisation="fod-financien"] .logo-wrapper__image {
+  width: 49.85px;
+  height: 14.07px;
+}
+
+.logo-wrapper[data-organisation="fedris"] .logo-wrapper__image {
+  width: 49.65px;
+  height: 35px;
+}
+
+.logo-wrapper[data-organisation="stad-antwerpen"] .logo-wrapper__image {
+  width: 29.83px;
+  height: 29.83px;
+}
