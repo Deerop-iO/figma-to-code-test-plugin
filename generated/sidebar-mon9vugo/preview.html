@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Sidebar — Preview</title>
+  <link rel="stylesheet" href="./sidebar.css">
+  <style>
+    /* Preview-only: give the sidebar a viewport-height container */
+    html, body { margin: 0; padding: 0; height: 100%; }
+    body { display: flex; }
+  </style>
+</head>
+<body>
+
+  <aside class="sidebar">
+    <header class="sidebar__header">
+      <div class="sidebar__logo">
+        <div class="sidebar__logo-wordmark">
+          <span class="sidebar__logo-my">my</span>
+          <span class="sidebar__logo-pill">
+            <span class="sidebar__logo-pill-ebox">eBox</span>
+          </span>
+        </div>
+        <span class="sidebar__logo-hub">HUB</span>
+      </div>
+      <button class="sidebar__search" type="button" aria-label="Search">
+        <span class="sidebar__icon sidebar__icon--search" aria-hidden="true">search</span>
+      </button>
+    </header>
+
+    <nav class="sidebar__nav" aria-label="Main navigation">
+      <ul class="sidebar__nav-list">
+        <li class="sidebar__nav-item sidebar__nav-item--selected">
+          <a href="#" class="sidebar__nav-link" aria-current="page">
+            <span class="sidebar__icon sidebar__icon--nav" aria-hidden="true">dashboard</span>
+            <span class="sidebar__nav-label">Overzicht</span>
+            <span class="sidebar__nav-counter">2</span>
+          </a>
+          <span class="sidebar__indicator" aria-hidden="true"></span>
+        </li>
+
+        <li class="sidebar__nav-item">
+          <a href="#" class="sidebar__nav-link">
+            <span class="sidebar__icon sidebar__icon--nav" aria-hidden="true">mail</span>
+            <span class="sidebar__nav-label">Berichten</span>
+            <span class="sidebar__nav-counter">1</span>
+          </a>
+          <span class="sidebar__indicator" aria-hidden="true"></span>
+        </li>
+        <li class="sidebar__submenu" data-submenu="messages" hidden></li>
+
+        <li class="sidebar__nav-item">
+          <a href="#" class="sidebar__nav-link">
+            <span class="sidebar__icon sidebar__icon--nav" aria-hidden="true">e-loket</span>
+            <span class="sidebar__nav-label">Dossiers</span>
+            <span class="sidebar__nav-counter">1</span>
+          </a>
+          <span class="sidebar__indicator" aria-hidden="true"></span>
+        </li>
+        <li class="sidebar__submenu" data-submenu="dossiers" hidden></li>
+
+        <li class="sidebar__nav-item">
+          <a href="#" class="sidebar__nav-link">
+            <span class="sidebar__icon sidebar__icon--nav" aria-hidden="true">documents</span>
+            <span class="sidebar__nav-label">Documenten</span>
+            <span class="sidebar__nav-counter">1</span>
+          </a>
+          <span class="sidebar__indicator" aria-hidden="true"></span>
+        </li>
+        <li class="sidebar__submenu" data-submenu="documents" hidden></li>
+      </ul>
+    </nav>
+
+    <footer class="sidebar__user">
+      <div class="sidebar__user-info">
+        <span class="sidebar__user-avatar" aria-hidden="true">
+          <span class="sidebar__icon sidebar__icon--user">user</span>
+        </span>
+        <span class="sidebar__user-name">Jean Peeters</span>
+      </div>
+      <button class="sidebar__settings" type="button" aria-label="Settings">
+        <span class="sidebar__icon sidebar__icon--settings" aria-hidden="true">settings</span>
+      </button>
+    </footer>
+  </aside>
+
+</body>
+</html>
