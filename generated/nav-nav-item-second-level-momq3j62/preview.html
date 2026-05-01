@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Nav Item Level 2 — Preview</title>
+  <link rel="stylesheet" href="./nav-item-l2.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 32px;
+      background: #1a2b3c;
+      font-family: 'Roboto', sans-serif;
+    }
+    .preview-group {
+      max-width: 264px;
+      margin-bottom: 24px;
+    }
+    .preview-label {
+      color: #8a8a9a;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="preview-group">
+    <div class="preview-label">Idle (with counter)</div>
+    <a href="#" class="nav-item-l2 nav-item-l2--show-counter" data-state="idle">
+      <span class="nav-item-l2__label">Ongelezen</span>
+      <span class="nav-item-l2__counter" aria-label="2 items">2</span>
+    </a>
+  </div>
+
+  <div class="preview-group">
+    <div class="preview-label">Selected</div>
+    <a href="#" class="nav-item-l2 nav-item-l2--show-counter" data-state="selected">
+      <span class="nav-item-l2__label">Ongelezen</span>
+      <span class="nav-item-l2__counter" aria-label="2 items">2</span>
+    </a>
+  </div>
+
+  <div class="preview-group">
+    <div class="preview-label">Hover (forced via data-state)</div>
+    <a href="#" class="nav-item-l2 nav-item-l2--show-counter" data-state="hover">
+      <span class="nav-item-l2__label">Ongelezen</span>
+      <span class="nav-item-l2__counter" aria-label="2 items">2</span>
+    </a>
+  </div>
+
+  <div class="preview-group">
+    <div class="preview-label">Divider</div>
+    <span class="nav-item-l2" data-state="divider" role="presentation">
+      <span class="nav-item-l2__label">Mappen</span>
+      <span class="nav-item-l2__counter">2</span>
+    </span>
+  </div>
+
+  <div class="preview-group">
+    <div class="preview-label">Idle as &lt;button&gt; (with counter)</div>
+    <button type="button" class="nav-item-l2 nav-item-l2--show-counter" data-state="idle">
+      <span class="nav-item-l2__label">Ongelezen</span>
+      <span class="nav-item-l2__counter" aria-label="2 items">2</span>
+    </button>
+  </div>
+
+  <div class="preview-group">
+    <div class="preview-label">Selected as &lt;button&gt;</div>
+    <button type="button" class="nav-item-l2 nav-item-l2--show-counter" data-state="selected">
+      <span class="nav-item-l2__label">Ongelezen</span>
+      <span class="nav-item-l2__counter" aria-label="2 items">2</span>
+    </button>
+  </div>
+
+</body>
+</html>
