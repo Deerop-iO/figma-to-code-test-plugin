@@ -1,0 +1,169 @@
+
+/* --- Tokens --- */
+.message-teaser {
+  --color-surface-default: #ffffff;
+  --color-surface-hover: #daf2fc;
+  --color-surface-pressed: #b6e8ff;
+  --color-border-default: #bcbdc8;
+  --color-border-selected: #006f9e;
+  --color-text-primary: #0c0f1e;
+  --color-text-secondary: #2b2d42;
+  --color-icon-accent: #00567b;
+  --color-badge-success-bg: #d0f0de;
+  --color-badge-success-text: #125e32;
+  --color-badge-info-bg: #daf2fc;
+  --color-badge-info-text: #00567b;
+}
+
+/* --- Base --- */
+.message-teaser {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid var(--color-border-default);
+  background: var(--color-surface-default);
+  font-family: 'Roboto', sans-serif;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+/* --- Content wrapper --- */
+.message-teaser__content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+}
+
+/* --- Logo wrapper --- */
+.message-teaser__logo-wrapper {
+  width: 56px;
+  height: 56px;
+  border-radius: 8px;
+  background: var(--color-surface-default);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.message-teaser__logo {
+  width: 31px;
+  height: 31px;
+  object-fit: contain;
+}
+
+/* --- Info block --- */
+.message-teaser__info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.message-teaser__titles {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.message-teaser__sender {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.message-teaser__title {
+  font-family: 'Barlow', sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+/* --- Availability --- */
+.message-teaser__availability {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.message-teaser__availability-icon {
+  width: 18px;
+  height: 18px;
+  color: var(--color-icon-accent);
+  flex-shrink: 0;
+}
+
+.message-teaser__availability-text {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: var(--color-text-secondary);
+}
+
+/* --- Badges --- */
+.message-teaser__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-end;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.message-teaser__badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.message-teaser__badge--success {
+  background: var(--color-badge-success-bg);
+  color: var(--color-badge-success-text);
+}
+
+.message-teaser__badge--info {
+  background: var(--color-badge-info-bg);
+  color: var(--color-badge-info-text);
+}
+
+/* --- Read state --- */
+.message-teaser[data-read="true"] .message-teaser__sender {
+  font-weight: 400;
+}
+
+.message-teaser[data-read="true"] .message-teaser__title {
+  font-weight: 400;
+}
+
+/* --- Interaction states --- */
+.message-teaser[data-state="hover"],
+.message-teaser:hover {
+  background: var(--color-surface-hover);
+}
+
+.message-teaser[data-state="pressed"],
+.message-teaser:active {
+  background: var(--color-surface-pressed);
+}
+
+.message-teaser[data-state="selected"],
+.message-teaser[aria-current="true"] {
+  border-color: var(--color-border-selected);
+  background: var(--color-surface-default);
+}
+
+/* Focus ring */
+.message-teaser:focus-visible {
+  outline: 2px solid var(--color-border-selected);
+  outline-offset: 2px;
+}
