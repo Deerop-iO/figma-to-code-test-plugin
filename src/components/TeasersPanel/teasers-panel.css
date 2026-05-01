@@ -1,0 +1,135 @@
+.teasers-panel {
+  display: flex;
+  flex-direction: column;
+  width: 376px;
+  height: 896px;
+  background: #ffffff;
+  border: 1px solid #dadbe3;
+  overflow: hidden;
+}
+
+/* Header */
+.teasers-panel__header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 15px 16px 7px 16px;
+  background: #ffffff;
+  box-shadow: 0 0 0 0 rgba(12, 15, 30, 0.1);
+  flex-shrink: 0;
+}
+
+.teasers-panel__title-actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.teasers-panel__title {
+  font-family: 'Barlow', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: 0;
+  color: #2b2d42;
+  margin: 0;
+}
+
+.teasers-panel__actions {
+  display: flex;
+  flex-direction: row;
+}
+
+.teasers-panel__more-btn {
+  appearance: none;
+  border: 0;
+  background: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 1000px;
+}
+
+.teasers-panel__more-btn:focus-visible {
+  outline: 2px solid #00567b;
+  outline-offset: 2px;
+}
+
+/* Messages scrollable area */
+.teasers-panel__messages {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow-y: auto;
+  flex: 1 1 0;
+}
+
+/* Month group */
+.teasers-panel__month {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0 16px;
+}
+
+/* Expand / Collapse button */
+.teasers-panel__expand {
+  appearance: none;
+  border: 0;
+  background: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  min-height: 32px;
+  width: 100%;
+  text-align: left;
+}
+
+.teasers-panel__expand:focus-visible {
+  outline: 2px solid #00567b;
+  outline-offset: 2px;
+}
+
+.teasers-panel__expand-label {
+  flex: 1 1 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0.14px;
+  text-transform: uppercase;
+  color: #1d1f32;
+}
+
+.teasers-panel__chevron {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  transition: transform 0.2s ease;
+}
+
+.teasers-panel__expand[aria-expanded="false"] .teasers-panel__chevron {
+  transform: rotate(180deg);
+}
+
+/* Month messages list */
+.teasers-panel__month-messages {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Collapsed state hides messages */
+.teasers-panel__expand[aria-expanded="false"] + .teasers-panel__month-messages {
+  display: none;
+}
