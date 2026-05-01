@@ -1,0 +1,48 @@
+
+/* --- Badge tokens (no Figma variables available; promoted literals) --- */
+.badge {
+  --badge-bg-success: #d0f0de;
+  --badge-color-success: #125e32;
+  --badge-bg-info: #daf2fc;
+  --badge-color-info: #00567b;
+  --badge-bg-warning: #fff5e3;
+  --badge-color-warning: #893b03;
+  --badge-bg-danger: #fde5ec;
+  --badge-color-danger: #a5002f;
+}
+
+/* --- Base --- */
+.badge {
+  display: inline-flex;
+  align-items: flex-start;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* --- Variant: Type --- */
+.badge[data-type="success"] {
+  background-color: var(--badge-bg-success);
+  color: var(--badge-color-success);
+}
+
+.badge[data-type="info"] {
+  background-color: var(--badge-bg-info);
+  color: var(--badge-color-info);
+}
+
+.badge[data-type="warning"] {
+  background-color: var(--badge-bg-warning);
+  color: var(--badge-color-warning);
+}
+
+.badge[data-type="danger"] {
+  background-color: var(--badge-bg-danger);
+  color: var(--badge-color-danger);
+}
